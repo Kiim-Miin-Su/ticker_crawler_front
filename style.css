@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #333;
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 100vh;
+
+}
+
+main {
+    width: 70%;
+    padding: 20px;
+}
+
+aside {
+    margin-left: 20px;
+    width: 25%;
+    padding: 20px;
+}
+
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    height: 100px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.2;
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.2;
+    margin-top: 30px;
+}
+
+main {
+    margin-bottom: 20px;
+}
+
+main h2 {
+    border-bottom: 1px solid #333;
+    padding-bottom: 17px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+main p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+main .export-form {
+    margin: 50px auto;
+    border: 1px solid #333;
+    border-radius: 10px;
+    width: 100%;
+    height: 300px;
+    background-color: #f0f0f0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .export-form-options {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+main .export-form-options select {
+    margin-top: 10px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+main .export-form-options select option {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+main .file-name-input {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+main .file-name-input input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+main .file-name-input input::placeholder {
+    color: #999;
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: center;
+}
+
+main .export-button {
+    margin: 10px auto;
+    width: 50%;
+}
+
+main .export-button button {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+main .export-button button:hover {
+    background-color: #333;
+    color: #fff;
+}
