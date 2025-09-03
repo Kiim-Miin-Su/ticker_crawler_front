@@ -25,6 +25,12 @@ exportRequest = async (file_type, filename) => {
         },
         body: JSON.stringify({ file_type, filename }),
     });
+    if (!response.ok) {
+        const text = await response.text();
+        console.error("Server error:", text);
+        alert("서버 오류");
+        return;
+    }
     const blob = await response.blob();
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
