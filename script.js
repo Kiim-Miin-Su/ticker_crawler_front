@@ -15,20 +15,20 @@ exportButton.addEventListener('click', () => {
     const filename = fileName.value;
 
     exportRequest(file_type, filename);
-    alert('완료');
 });
 
 exportRequest = async (file_type, filename) => {
     const response = await fetch('https://tickercrawler-production.up.railway.app/export', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({ file_type, filename }),
     });
-    if (response.ok) {
-        alert('완료');
-    } else {
-        alert('실패');
-    }
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    a.click();
 };
