@@ -13,15 +13,15 @@ exportButton.addEventListener('click', () => {
     }
 
     let filename = fileName.value;
+    if (filename.includes(' ') || filename.includes('.')) {
+        alert('파일 이름에 공백이나 점이 있습니다');
+        return;
+    }
     if (exportFormat.value === 'excel' && !filename.endsWith('.xlsx')) {
         filename += '.xlsx';
     }
     if (exportFormat.value === 'csv' && !filename.endsWith('.csv')) {
         filename += '.csv';
-    }
-    if (filename.includes(' ') || filename.includes('.')) {
-        alert('파일 이름에 공백이나 점이 있습니다');
-        return;
     }
     const file_type = exportFormat.value;
 
