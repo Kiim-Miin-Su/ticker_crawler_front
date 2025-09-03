@@ -26,6 +26,8 @@ exportButton.addEventListener('click', () => {
     const file_type = exportFormat.value;
 
     exportRequest(file_type, filename);
+
+    alert("잠시만 기다려주세요.");
 });
 
 exportRequest = async (file_type, filename) => {
@@ -48,4 +50,5 @@ exportRequest = async (file_type, filename) => {
     a.href = url;
     a.download = filename;
     a.click();
+    alert("다운로드 완료");
 };
